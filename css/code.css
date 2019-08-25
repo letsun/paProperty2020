@@ -1,0 +1,148 @@
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  font: normal normal normal 28px/40px 'Microsoft YaHei', Arial, sans-serif;
+}
+img {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea,
+button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+html,
+body {
+  position: relative;
+}
+.bg {
+  width: 100%;
+  display: block;
+}
+.code-box {
+  position: absolute;
+  top: 775px;
+  left: 155px;
+  z-index: 999;
+  overflow: hidden;
+}
+.code-box p {
+  float: left;
+  width: 42px;
+  height: 42px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
+}
+.code-box p:not(:last-of-type) {
+  margin-right: 17px;
+}
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  display: block;
+}
+.link-url {
+  position: absolute;
+  top: 1950px;
+  left: 251px;
+  width: 300px;
+  height: 30px;
+  display: block;
+}
+
+
+.loading-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  display: none;
+}
+.loading-wrapper .loading-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-wrapper .loading-container .loading-con {
+  width: 150px;
+  height: 120px;
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #222;
+  border-radius: 10px;
+}
+.loading-wrapper .loading-container .loading-con .icon {
+  display: block;
+  margin: 0 auto;
+  width: 45px;
+  height: 45px;
+  background: url("../images/loading.gif") no-repeat;
+  background-size: 100% 100%;
+}
+.loading-wrapper .loading-container .loading-con .text {
+  margin-top: 20px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}

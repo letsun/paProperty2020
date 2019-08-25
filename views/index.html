@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>未来城市梦想家|校招内推等你来</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=640, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+    <script src="../scripts/lib/jquery-2.2.2.min.js"></script>
+    <script src="../scripts/lib/md5.js"></script>
+    <script src="../scripts/lib/common.js"></script>
+    <script src="../scripts/lib/jweixin-1.0.0.js"></script>
+    <script src="../scripts/lib/myweixin-1.0.js"></script>
+    <script src="../scripts/other/index.js"></script>
+    <script>
+        common.getUserMes(0);
+
+        if(common.opid) {
+            var url = "https://order.letsun.com.cn/w/pakj/queryCode/252";
+
+            $.ajax({
+                type: 'GET',
+                url: url,
+                dataType: 'jsonp',
+                data: {
+                    openid: common.opid
+                },
+                jsonp: "checkLogin",
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    alert("请求出错!");
+                },
+                success: function (res) {
+                    if (res.status == 0) {
+                        common.alert({
+                            content: res.msg
+                        })
+                    }
+
+                    if (res.status == 2) {
+                        window.location.href = "./code.html?code=" + res.code;
+                    }
+                }
+            });
+        }
+
+    </script>
+
+
+</head>
+<body>
+<div id="container">
+    <!-- 背景 -->
+    <img class="bg" src="../images/1_1.png" />
+
+    <div class="content">
+        <div class="input-box">
+            <label class="box-icon">
+                <img src="../images/1_2.png" />
+                <span>UM账号</span>
+            </label>
+
+            <input class="code-no" id="code-no" type="text" />
+        </div>
+
+        <a class="submit-btn" id="submit-btn" href="javascript:;">提交</a>
+
+        <p class="warn">输入UM编号，点击提交，即可生成内推码</p>
+    </div>
+
+    <!--<img src="../images/1_3.png" alt="" class="tip">-->
+</div>
+
+<script>
+
+    /**微信分享*/
+    common.wxShare({
+        title: "未来城市梦想家|校招内推等你来",
+        desc: "机会先给自己人",
+        link: location.protocol + "//" + location.hostname +"/paFuture2020/views/index.html",
+        imgUrl: location.protocol + "//" + location.hostname +"/paFuture2020/images/share.png",
+        isStat: true
+    });
+
+    // 输入框失去焦点兼容苹果系统
+    $('input,textarea,select').on('blur',function(){
+        setTimeout(function () {
+            var hasFocus = $('input').is(':focus') || $('textarea').is(':focus') || $('select').is(':focus');
+            if (!hasFocus) {
+                window.scroll(0,0);
+            }
+        },100);
+    });
+
+    common.stat();
+
+    main.init();
+</script>
+</body>
+</html>
