@@ -50,10 +50,14 @@
     common.wxShare({
         title: "未来城市梦想家|校招内推等你来",
         desc: "机会先给自己人",
-        link: location.protocol + "//" + location.hostname +"/paFuture2020/views/code.html?code=" + code,
-        imgUrl: location.protocol + "//" + location.hostname +"/paFuture2020/images/share.png",
+        link: location.protocol + "//" + location.hostname +"/test/paProperty2020/views/code.html?code=" + code,
+        imgUrl: location.protocol + "//" + location.hostname +"/test/paProperty2020/images/share.png",
         isStat: true
     });
+
+
+    // 浏览统计
+    common.stat();
 
     window.onload = function() {
         $('#loadingWrapper').show();

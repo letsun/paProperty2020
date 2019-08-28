@@ -71,24 +71,29 @@ body {
 }
 .code-box {
   position: absolute;
-  top: 775px;
-  left: 155px;
+  top: 763px;
+  left: 159px;
   z-index: 999;
   overflow: hidden;
 }
 .code-box p {
   float: left;
-  width: 42px;
+  width: 43px;
   height: 42px;
   line-height: 40px;
-  color: #fff;
+  color: #ea5504;
   font-size: 24px;
   font-weight: bolder;
   text-align: center;
 }
 .code-box p:not(:last-of-type) {
-  margin-right: 17px;
+  margin-right: 12px;
 }
+
+.code-box p:last-child {
+  width: 39px;
+}
+
 .canvas {
   position: absolute;
   top: 0;
@@ -99,8 +104,8 @@ body {
 }
 .link-url {
   position: absolute;
-  top: 1950px;
-  left: 251px;
+  top: 2159px;
+  left: 248px;
   width: 300px;
   height: 30px;
   display: block;

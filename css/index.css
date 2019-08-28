@@ -21,6 +21,9 @@ ul {
 body {
   color: #333;
   font: normal normal normal 28px/40px 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -moz--tap-highlight-color:rgba(0,0,0,0);
+  -o--tap-highlight-color:rgba(0,0,0,0);
 }
 img {
   border: 0;
@@ -65,22 +68,19 @@ html,
 body {
   position: relative;
   height: 100%;
-
-  background: url('../images/1_4.png') repeat-y;
-
-  overflow: hidden;
 }
 .bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 }
 .content {
   position: absolute;
-  top: 723px;
+  bottom: 17%;
   left: 50%;
-  width: 448px;
+  width: 430px;
   margin-left: -224px;
 }
 .content .input-box {
@@ -91,7 +91,7 @@ body {
   border-radius: 30px;
   box-sizing: border-box;
 
-  border: 2px solid #fff;
+  border: 2px solid #ea5504;
 }
 .content .input-box .box-icon {
   position: absolute;
@@ -106,7 +106,7 @@ body {
   vertical-align: middle;
 }
 .content .input-box .box-icon span {
-  color: #fff;
+  color: #ea5504;
   font-size: 28px;
   vertical-align: middle;
 }
@@ -114,7 +114,7 @@ body {
   width: 100%;
   padding: 11px 0 0 10px;
   margin-left: -17px;
-  color: #fff;
+  color: #ea5504;
   font-size: 28px;
   -webkit-appearance: none;
   background: none;
@@ -123,27 +123,23 @@ body {
   box-sizing: border-box;
 /*  background: #fff;*/
 }
-.content .input-box ::-webkit-input-placeholder {
-  color: #fe0000;
-  font-size: 18px;
-}
 .content .submit-btn {
   width: 100%;
   height: 60px;
   line-height: 60px;
   margin-top: 20px;
   display: block;
-  color: #fff;
+  color: #ea5504;
   font-size: 28px;
   text-align: center;
   border-radius: 30px;
-  background: #668ffa;
-  border: 2px solid #fff;
+  background: #fff;
+  border: 2px solid #ea5504;
   box-sizing: border-box;
 }
 .content .warn {
   margin-top: 10px;
-  color: #fff;
+  color: #ea5504;
   font-size: 22px;
   text-align: center;
 }

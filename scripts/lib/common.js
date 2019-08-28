@@ -5,10 +5,9 @@ var timer = [];
 (function ($) {
     var baseUrl = "https://order.letsun.com.cn/";
     common.cfg = {
-        companyId: "252",
+        companyId: "255",
         placeId: "261",
         cityId: "1400",
-
         shareStat: baseUrl + "w/wxutil/addShareSumUrl/",                      //统计分享量
         totalStat: baseUrl + "w/wxutil/writePvuv/",                           //统计访问量
         getOpenId: baseUrl + "w/crossDomain/",                                //获取open id
@@ -239,7 +238,7 @@ var timer = [];
      * @desc 分享量统计
      * @param url
      */
-    function addShareSumUrl(url) {
+    common.addShareSumUrl = function (url) {
         var shareUrl = common.cfg.shareStat + common.cfg.companyId;
 
         $.ajax({
@@ -262,7 +261,7 @@ var timer = [];
                 }
             }
         });
-    }
+    };
 
     /**
      * @desc 访问量统计
@@ -288,7 +287,7 @@ var timer = [];
      */
     common.getUserMes = function (getPhoto) {
         /*var reurl = window.location.href.split('#')[0];*/
-        var reurl = location.protocol + '//' + location.hostname + '/paFuture2020/views/index.html';
+        var reurl = location.protocol + '//' + location.hostname + '/test/paProperty2020/views/index.html';
         var isWxBrowser = wxJs.isWeixin();
 
         var url;

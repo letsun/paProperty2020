@@ -19,7 +19,7 @@
         common.getUserMes(0);
 
         if(common.opid) {
-            var url = "https://order.letsun.com.cn/w/pakj/queryCode/252";
+            var url = "https://order.letsun.com.cn/w/pakj/queryCode/255";
 
             $.ajax({
                 type: 'GET',
@@ -67,7 +67,7 @@
 
         <a class="submit-btn" id="submit-btn" href="javascript:;">提交</a>
 
-        <p class="warn">输入UM编号，点击提交，即可生成内推码</p>
+        <p class="warn">输入UM账号，点击提交，即可生成内推码</p>
     </div>
 
     <!--<img src="../images/1_3.png" alt="" class="tip">-->
@@ -79,8 +79,8 @@
     common.wxShare({
         title: "未来城市梦想家|校招内推等你来",
         desc: "机会先给自己人",
-        link: location.protocol + "//" + location.hostname +"/paFuture2020/views/index.html",
-        imgUrl: location.protocol + "//" + location.hostname +"/paFuture2020/images/share.png",
+        link: location.protocol + "//" + location.hostname +"/test/paProperty2020/views/index.html",
+        imgUrl: location.protocol + "//" + location.hostname +"/test/paProperty2020/images/share.png",
         isStat: true
     });
 

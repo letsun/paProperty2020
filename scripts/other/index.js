@@ -21,7 +21,7 @@ var main = {};
             }
 
             // ajax请求
-            var url = "https://order.letsun.com.cn/w/pakj/login/252";
+            var url = "https://order.letsun.com.cn/w/pakj/login/255";
 
             $.ajax({
                 type: 'GET',
