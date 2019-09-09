@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>未来城市梦想家|校招内推等你来</title>
+    <title>平安产险总部校招内推开始了！</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=640, user-scalable=no">
@@ -38,6 +38,7 @@
     <div class="loading-wrapper" id="loadingWrapper">
         <div class="loading-container">
             <div class="loading-con">
+                <div id="percent" style="display: none;"></div>
                 <i class="icon"></i>
                 <div class="text">正在加载</div>
             </div>
@@ -46,24 +47,24 @@
 </div>
 
 <script>
+
     /**微信分享*/
     common.wxShare({
-        title: "未来城市梦想家|校招内推等你来",
-        desc: "机会先给自己人",
-        link: location.protocol + "//" + location.hostname +"/test/paProperty2020/views/code.html?code=" + code,
-        imgUrl: location.protocol + "//" + location.hostname +"/test/paProperty2020/images/share.png",
+        title: "平安产险总部校招内推开始了！",
+        desc: "我不要你觉得，我要我觉得！产险总部校招内推听我的！",
+        link: location.protocol + "//" + location.hostname +"/paProperty2020/views/code.html?code=" + code,
+        imgUrl: location.protocol + "//" + location.hostname +"/paProperty2020/images/share.png",
         isStat: true
     });
 
+    common.loading($("#percent"));
 
     // 浏览统计
     common.stat();
 
-    window.onload = function() {
-        $('#loadingWrapper').show();
+    window.onload = function () {
         var codeN = code.split("");
         var html = "";
-
         for(let i = 0; i < codeN.length; i++) {
             html += '<p>' + codeN[i] + '</p>';
         }
@@ -74,7 +75,7 @@
         var width = shareContent.offsetWidth; //获取dom 宽度
         var height = shareContent.offsetHeight; //获取dom 高度
         var canvas = document.createElement("canvas"); //创建一个canvas节点
-        var scale = 2; //定义任意放大倍数 支持小数
+        var scale = 1; //定义任意放大倍数 支持小数
         canvas.width = width * scale; //定义canvas 宽度 * 缩放
         canvas.height = height * scale; //定义canvas高度 *缩放
         canvas.getContext("2d").scale(scale, scale); //获取context,设置scale
@@ -103,13 +104,11 @@
             img.className = 'canvas abs';
 
             $(img).css({
-                "width": canvas.width / 2 + "px",
-                "height": canvas.height / 2 + "px"
+                "width": "640px",
             });
 
             shareContent.appendChild(img);
             $('#loadingWrapper').hide();
-
         });
     };
 </script>

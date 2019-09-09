@@ -9,7 +9,7 @@ var timer = [];
         placeId: "261",
         cityId: "1400",
         shareStat: baseUrl + "w/wxutil/addShareSumUrl/",                      //统计分享量
-        totalStat: baseUrl + "w/wxutil/writePvuv/",                           //统计访问量
+        totalStat: baseUrl + "w/wxutil/writePvuv2/",                           //统计访问量
         getOpenId: baseUrl + "w/crossDomain/",                                //获取open id
         apply: baseUrl + "w/crossDomain/submitData/",                         //报名
         checkSubmit: baseUrl + "w/crossDomain/queryResume/",                  //查询是否提交过资料
@@ -17,7 +17,6 @@ var timer = [];
         getRank: baseUrl + "w/crossDomain/queryRankinglistForNum/",           //获取排行榜
         submitScore: baseUrl + "w/crossDomain/submitGamescore/",              //提交分数
         submitHelp: baseUrl + "w/crossDomain/submitHelp/",                    //提交好友助力
-
         checkLottery: baseUrl + "w/crossDomain/querylottly/",                 //查询是否中奖
         lottery: baseUrl + "w/crossDomain/lottly/",                           //抽奖
         winnerMes: baseUrl + "w/crossDomain/submitBuyer/"                     //中奖人数据提交
@@ -286,8 +285,8 @@ var timer = [];
      * @param getPhoto {Number} 是否获取头像 1：是 0：否
      */
     common.getUserMes = function (getPhoto) {
-        /*var reurl = window.location.href.split('#')[0];*/
-        var reurl = location.protocol + '//' + location.hostname + '/test/paProperty2020/views/index.html';
+        var reurl = window.location.href.split('#')[0];
+        /*var reurl = location.protocol + '//' + location.hostname + '/paProperty2020/views/index.html';*/
         var isWxBrowser = wxJs.isWeixin();
 
         var url;
