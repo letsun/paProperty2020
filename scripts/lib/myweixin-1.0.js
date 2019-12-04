@@ -197,7 +197,7 @@ function setwx_config(appId,timestamp,nonceStr,signature){
 	 * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
 	 */
 	 wx.config({
-	      debug: false,// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+	      debug: true,// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 	      appId: appId,// 必填，公众号的唯一标识
 	      timestamp: timestamp,// 必填，生成签名的时间戳
 	      nonceStr: nonceStr,// 必填，生成签名的随机串
@@ -367,11 +367,6 @@ function wx_Share(reurl,shareData,isLoadSound){
 	var corpid = '203';
 	var wxappid = "wx1ee613cd8270ac7c"; //订阅号
 
-	if (reurl.indexOf("h5.ebiaoji.com") >= 0){
-		//用pop的参数
-        corpid = '247';
-        wxappid = 'wx1ee613cd8270ac7c';
-    }
 	
 	//异步获取微信jS-SDK 参数
 	getJsApSign2(reurl.split('#')[0],wxappid,corpid,getJsUrl);
